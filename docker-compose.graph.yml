@@ -17,6 +17,7 @@ services:
     volumes:
       - fraud_neo4j_data:/data
       - fraud_neo4j_logs:/logs
+      - /d/Python/gen_ai/datasets:/var/lib/neo4j/import
 
 volumes:
   fraud_neo4j_data:
