@@ -14,12 +14,17 @@ services:
       - 7687:7687
     environment:
       - NEO4J_AUTH=neo4j/fraud_detection
+      # - NEO4J_AUTH=neo4j/hybrid_rag
     volumes:
       - fraud_neo4j_data:/data
       - fraud_neo4j_logs:/logs
+      # - hybrid_rag_data:/data
+      # - hybrid_rag_logs:/logs
       - /d/Python/gen_ai/datasets:/var/lib/neo4j/import
 
 volumes:
   fraud_neo4j_data:
   fraud_neo4j_logs:
   fraud_qdrant_data:
+  # hybrid_rag_data:
+  # hybrid_rag_logs:
